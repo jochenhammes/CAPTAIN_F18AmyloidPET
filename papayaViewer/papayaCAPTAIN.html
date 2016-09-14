@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    	<!-- iOS meta tags -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    	<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    	<link rel="stylesheet" type="text/css" href="papaya.css?version=0.8&build=1148" />
+	<link rel="stylesheet" href="../CAPTAIN_Ratings.css" type="text/css"/>
+    	<script type="text/javascript" src="../CookieAndParamHandling.js"></script>
+    	<script type="text/javascript" src="papaya.js?version=0.8&build=1148"></script>
+    
+    	<title>CAPTAIN Rating</title>
+    
+    	<script type="text/javascript">
+	var params = [];
+	params["images"] = ["data/" + $_GET('fileName')];
+	params["radiological"] = true;
+	
+	console.log(params["images"]);
+         
+	params["luts"] = [{"name": "InvertedGray", "data":[[0, 1, 1, 1], [1, 0, 0, 0]]}];
+	
+	//params[$_GET('fileName')] = {lut: "InvertedGray"};
+	params[$_GET('fileName')] = {lut: $_GET('lut')};
+	
+
+	
+	
+          function openGoogleForm() {
+	    
+	    //var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSetlMWo93Iz5A42DHUOR_1SS2LFRy0rsbCtaSwNtHZX2_Q8mA/viewform?entry.580736090=" + $_GET('RaterName') + "&entry.433870613=" + $_GET('Bildnummer') + "&entry.154570552=";
+	    //urlForm = urlForm + $_GET('TimeStamp');
+	    
+	    
+	    var urlForm = "https://docs.google.com/forms/d/e/1FAIpQLSf3xJazA6ePrYh_MTbl1nhGbWfYR8OOatMkh18y_AXSARfJzg/viewform?entry.580736090=" + $_GET('RaterName') + "&entry.433870613=" + $_GET('Bildnummer') + "&entry.154570552=";
+            urlForm = urlForm + $_GET('TimeStamp');
+	    
+            newWindow = window.open(urlForm);
+          }
+          
+        
+        </script>
+
+	</head>
+
+	<body>
+		<div id="pagewidth">		
+			<div class="papaya" data-params="params"></div>
+			<br>
+			<div class="mainlist centered">
+				<strong><a id="6TIP2" href="javascript:openGoogleForm()">Weiter zum Fragebogen</a></strong>
+			</div>
+		</div>
+		
+	</body>
+</html>
