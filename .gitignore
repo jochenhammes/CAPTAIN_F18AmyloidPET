@@ -16,3 +16,9 @@ papayaViewer/data/backup.1226_suvr_wduptakeavg_rsl.nii
 papayaViewer/data/RAW_2_new.nii.gz
 
 papayaViewer/data/SUM.nii
+
+*.m~
+
+papayaViewer/.DS_Store
+
+papayaViewer/.DS_Store
