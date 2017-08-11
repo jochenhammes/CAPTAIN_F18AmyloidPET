@@ -6,3 +6,13 @@ papayaViewer/data/1226_suvr_wduptakeavg.hdr
 papayaViewer/data/1226_suvr_wduptakeavg.img
 
 papayaViewer/data/backup.1226_suvr_wduptakeavg_rsl.nii
+
+*.nii
+
+*.gz
+
+*.gz
+
+papayaViewer/data/RAW_2_new.nii.gz
+
+papayaViewer/data/SUM.nii
