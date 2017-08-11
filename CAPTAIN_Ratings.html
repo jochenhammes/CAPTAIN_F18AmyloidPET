@@ -26,7 +26,7 @@
             var currentdate = new Date();
             var currentTimestamp = currentdate.getHours() + ":"+ currentdate.getMinutes() + ":"+ currentdate.getSeconds();
 
-            var RedirectURL = "papayaViewer/PapayaCAPTAIN.html?" + "&fileName=" + fileName + "&RaterName=" + $_GET('RaterName') + "&Bildnummer=" + Bildnummer + "&TimeStamp=" + currentTimestamp + "&lut=" + lut ;
+            var RedirectURL = "papayaViewer/papayaCAPTAIN.html?" + "&fileName=" + fileName + "&RaterName=" + $_GET('RaterName') + "&Bildnummer=" + Bildnummer + "&TimeStamp=" + currentTimestamp + "&lut=" + lut ;
                         
              
             var DOMsrc = document.getElementById(senderID);
@@ -83,11 +83,28 @@
                 CapTAINS Ratings
             </div>
             <div class="mainlist">
-                <img src="captain.png" style="width: 164px; height: 234px"><br>
-                Comparing Amyloid PET tracers and interpretation strategies.<br>
-                
+                <img src="captain.png" style="width: 164px; height: 234px; float: right">
+                <strong> Amyloid PET tracers and interpretation strategies.</strong><br>
                 Please assess amyloid positivity of the following PET scans.
-                
+                <br><br><br>
+
+                <strong>How to rate?</strong><br>
+                <span style="text-decoration:underline ">FPB:</span><br>
+                Starting point: cerebellum<br>
+                Positive if: a) two or more brain regions =/> white matter OR b) one or more region >> white matter
+                <br><br>
+                <span style="text-decoration:underline ">FBB:</span><br>
+                Starting point: cerebellum<br>
+                Positive if: At least one cortical region above 50-60 % of peak or loss of grey/white contrast
+                <br><br>
+                <span style="text-decoration:underline ">FLUTE:</span><br>
+                Starting point: pons<br>
+                Positive if:  a) Small areas in the majority of slices of one region OR b) One large confluent area in one region
+
+
+
+
+
                 <!--<br><br>
                 <strong>Hinweis:</strong> Diese Seite funktioniert nur, wenn Ihr Popup-Blocker deaktiviert ist.-->
             </div>
@@ -96,37 +113,31 @@
             </div>
         <div class="mainlist">
             <ol id="List1">
-                <li><a id="1" href="javascript:openGoogleForm('0001','Test.nii.gz','1', 'InvertedGray')">CAPTAIN_Test InvertedGray</a></li>	
-                <li><a id="2" href="javascript:openGoogleForm('0002','Test.nii.gz','2', 'Grayscale')">CAPTAIN_Test Grayscale</a></li>	
-                <li><a id="3" href="javascript:openGoogleForm('0003','Test.nii.gz','3', 'Spectrum')">CAPTAIN_Test Spectrum</a></li>	
-                <li><a id="4" href="javascript:openGoogleForm('0004','TestCAPTAIN.nii','4', 'Spectrum')">CAPTAIN_Test</a></li>
-                <li><a id="5" href="javascript:openGoogleForm('0005','RAW_2_new.nii','5', 'Spectrum')">RAW_2_new</a></li>
-                <li><a id="6" href="javascript:openGoogleForm('0006','amytest.nii','6', 'Spectrum')">RAW_2_new</a></li>
 
-                <li><a id="1" href="javascript:openGoogleForm('001','1008_PET_FBB.nii','1', 'InvertedGray')">Image Nr. 001, Tracer: FBB</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('002','1018_PET_FBB.nii','1', 'FBB')">Image Nr. 002, Tracer: FBB</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('003','1022_PET_FBB.nii','1', 'FBB')">Image Nr. 003, Tracer: FBB</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('004','1031_PET_FBB.nii','1', 'FBB')">Image Nr. 004, Tracer: FBB</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('005','2002_PET_FBB.nii','1', 'FBB')">Image Nr. 005, Tracer: FBB</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('006','2017_PET_FBB.nii','1', 'FBB')">Image Nr. 006, Tracer: FBB</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('007','AIBL1049.nii','1', 'FBP')">Image Nr. 007, Tracer: FBP</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('008','AIBL132.nii','1', 'FBP')">Image Nr. 008, Tracer: FBP</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('009','AIBL1412.nii','1', 'FLUTE')">Image Nr. 009, Tracer: FLUTE</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('010','AIBL1422.nii','1', 'FLUTE')">Image Nr. 010, Tracer: FLUTE</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('011','AIBL1477.nii','1', 'FLUTE')">Image Nr. 011, Tracer: FLUTE</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('012','AIBL1518.nii','1', 'FLUTE')">Image Nr. 012, Tracer: FLUTE</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('013','AIBL1571.nii','1', 'FBP')">Image Nr. 013, Tracer: FBP</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('014','AIBL1608.nii','1', 'FLUTE')">Image Nr. 014, Tracer: FLUTE</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('015','AIBL1622.nii','1', 'FBP')">Image Nr. 015, Tracer: FBP</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('016','AIBL170.nii','1', 'FBP')">Image Nr. 016, Tracer: FBP</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('017','AIBL24.nii','1', 'FLUTE')">Image Nr. 017, Tracer: FLUTE</a></li>
-                <li><a id="1" href="javascript:openGoogleForm('018','AIBL522.nii','1', 'FBP')">Image Nr. 018, Tracer: FBP</a></li>
+                <li><a id="1" href="javascript:openGoogleForm('001','1008_PET_FBB.nii','1', 'Grayscale')">Image Nr. 001, FBB</a></li>
+                <li><a id="2" href="javascript:openGoogleForm('002','1018_PET_FBB.nii','2', 'Grayscale')">Image Nr. 002, FBB</a></li>
+                <li><a id="3" href="javascript:openGoogleForm('003','1022_PET_FBB.nii','3', 'Grayscale')">Image Nr. 003, FBB</a></li>
+                <li><a id="4" href="javascript:openGoogleForm('004','1031_PET_FBB.nii','4', 'Grayscale')">Image Nr. 004, FBB</a></li>
+                <li><a id="5" href="javascript:openGoogleForm('005','2002_PET_FBB.nii','5', 'Grayscale')">Image Nr. 005, FBB</a></li>
+                <li><a id="6" href="javascript:openGoogleForm('006','2017_PET_FBB.nii','6', 'Grayscale')">Image Nr. 006, FBB</a></li>
+                <li><a id="7" href="javascript:openGoogleForm('007','AIBL1049.nii','7', 'InvertedGray')">Image Nr. 007, FBP</a></li>
+                <li><a id="8" href="javascript:openGoogleForm('008','AIBL132.nii','8', 'InvertedGray')">Image Nr. 008, FBP</a></li>
+                <li><a id="9" href="javascript:openGoogleForm('009','AIBL1412.nii','9', 'Spectrum')">Image Nr. 009, FLUTE</a></li>
+                <li><a id="10" href="javascript:openGoogleForm('010','AIBL1422.nii','10', 'Spectrum')">Image Nr. 010, FLUTE</a></li>
+                <li><a id="11" href="javascript:openGoogleForm('011','AIBL1477.nii','11', 'Spectrum')">Image Nr. 011, FLUTE</a></li>
+                <li><a id="12" href="javascript:openGoogleForm('012','AIBL1518.nii','12', 'Spectrum')">Image Nr. 012, FLUTE</a></li>
+                <li><a id="13" href="javascript:openGoogleForm('013','AIBL1571.nii','13', 'InvertedGray')">Image Nr. 013, FBP</a></li>
+                <li><a id="14" href="javascript:openGoogleForm('014','AIBL1608.nii','14', 'Spectrum')">Image Nr. 014, FLUTE</a></li>
+                <li><a id="15" href="javascript:openGoogleForm('015','AIBL1622.nii','15', 'InvertedGray')">Image Nr. 015, FBP</a></li>
+                <li><a id="16" href="javascript:openGoogleForm('016','AIBL170.nii','16', 'InvertedGray')">Image Nr. 016, FBP</a></li>
+                <li><a id="17" href="javascript:openGoogleForm('017','AIBL24.nii','17', 'Spectrum')">Image Nr. 017, FLUTE</a></li>
+                <li><a id="18" href="javascript:openGoogleForm('018','AIBL522.nii','18', 'InvertedGray')">Image Nr. 018, FBP</a></li>
                 
                 
             </ol>
         </div>
         <div class="blue">
-            Dr. Jochen Hammes, 2016
+            Dr. Jochen Hammes, 2017
         </div>
         <div id="footer">
             
