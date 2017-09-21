@@ -1,10 +1,10 @@
 %Batch import dicom
 
 
-pathData = '/Users/hammesj/Downloads/CapTAINS/AIBL/';
+pathData = '/Volumes/Untitled/BrainPET_CT/TAU/';
 %pathData = '/Users/hammesj/Downloads/CapTAINS/FBB/';
 
-pathOutput = '/Users/hammesj/Downloads/CapTAINS/Nifitis/';
+pathOutput = '/Volumes/Untitled/BrainPET_CT/TAU/Nifitis/';
 
 
 
